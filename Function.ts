@@ -17,6 +17,15 @@ const wordCount = (str) => {
     return words.length;
 }
 
+//b. reverse(str)
+const reverse = (str) => {
+    if (typeof str !== 'string') {
+      throw new TypeError('Not a string');
+    }
+    return str.split('').reverse().join('');
+}
+
+
 // c. isPalindrome(str) 
 const isPalindrome = (str) => {
     if (typeof str !== 'string') {
