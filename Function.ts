@@ -43,3 +43,12 @@ const filterEven = (arr) = > {
   }   
   return arr.filter( num => num % 2 !== 0)
 }
+
+// a. doubleArr (arr)
+const doubleArr = (arr) => {
+  if (!Array.isArray(arr)){
+    throw new TypeError ('Input must be an array')
+  }
+
+  return arr.map( num => num *2 );
+}
