@@ -1,4 +1,4 @@
-//Task #1
+//Task #1 String Transformation
 // a. captalize(str) 
 const captalize = (str) => {
     if( typeof str !== string){
@@ -25,7 +25,6 @@ const reverse = (str) => {
     return str.split('').reverse().join('');
 }
 
-
 // c. isPalindrome(str) 
 const isPalindrome = (str) => {
     if (typeof str !== 'string') {
@@ -34,3 +33,6 @@ const isPalindrome = (str) => {
     const cleanStr = str.replace(/\W/g, '').toLowerCase();
     return cleanStr === reverse(cleanStr);
 }
+
+
+// Task #2 Array transformations
