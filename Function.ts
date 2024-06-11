@@ -36,19 +36,26 @@ const isPalindrome = (str) => {
 
 
 // Task #2 Array transformations
+const arrValid = (arr) => {
+    if(!Array.isArray(arr)){
+        throw new TypeError('Input must be an array')
+    }
+}
+
+
 // b. filterEven (arr)
 const filterEven = (arr) = > {
-  if (!Array.isArray(arr)) {
-    throw new TypeError('Input must be an array');
-  }   
+  arrValid(arr)   
   return arr.filter( num => num % 2 !== 0)
 }
 
 // a. doubleArr (arr)
 const doubleArr = (arr) => {
-  if (!Array.isArray(arr)){
-    throw new TypeError ('Input must be an array')
-  }
+  arrValid(arr)
+  return arr.map( num => num * 2 );
+}
 
-  return arr.map( num => num *2 );
+// c. sumArr
+const sumArr = (arr) => {
+    arrValid(arr)
 }
