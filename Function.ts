@@ -36,3 +36,10 @@ const isPalindrome = (str) => {
 
 
 // Task #2 Array transformations
+// b. filterEven (arr)
+const filterEven = (arr) = > {
+  if (!Array.isArray(arr)) {
+    throw new TypeError('Input must be an array');
+  }   
+  return arr.filter( num => num % 2 !== 0)
+}
