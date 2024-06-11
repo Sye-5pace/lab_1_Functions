@@ -16,3 +16,12 @@ const wordCount = (str) => {
     const words = str.trim().split(/\s+/);
     return words.length;
 }
+
+// c. isPalindrome(str) 
+const isPalindrome = (str) => {
+    if (typeof str !== 'string') {
+      throw new TypeError('Input must be a string');
+    }
+    const cleanStr = str.replace(/\W/g, '').toLowerCase();
+    return cleanStr === reverse(cleanStr);
+}
