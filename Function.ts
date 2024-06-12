@@ -72,6 +72,14 @@ const avgArr = (arr: number[]) => {
   return total / arr.length;
 }
 
+ // Task #3 Object Transformation
+ interface Person {
+    firstName: string,
+    lastName: string,
+    age?: number 
+  }
+  
+
 
 
   
