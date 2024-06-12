@@ -86,7 +86,24 @@ const isAtLeast = (value: number | undefined, target: number): boolean => {
 const fullName = (person : Person) : string => {
   return `${person.firstName?.trim() || ''} ${person.lastName?.trim() || ''}`;
 }
+
+const isAdult = (person: Person): boolean => {
+  return isAtLeast(person.age, 18);
+};
+
+const filterByAge = (people: Person[], minAge: number): Person[] => {
+  return people.filter(person => isAtLeast(person.age, minAge));
+}
+
+//Task #4
+const compose = <T>(...fns: ((arg: T) => T)[]): (arg: T) => T => {
+  return (arg: T) => fns.reduceRight((result, fn) => fn(result), arg as T);
+}
   
+const reverseAndCapitalize = compose(capitalize, reverse);
+  
+
+
 
     
   
