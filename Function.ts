@@ -73,13 +73,23 @@ const avgArr = (arr: number[]) => {
 }
 
  // Task #3 Object Transformation
- interface Person {
-    firstName: string,
-    lastName: string,
-    age?: number 
-  }
+interface Person {
+  firstName: string,
+  lastName: string,
+  age?: number 
+}
+
+const isAtLeast = (value: number | undefined, target: number): boolean => {
+  return value !== undefined && value >= target;
+}
+
+const fullName = (person : Person) : string => {
+  return `${person.firstName?.trim() || ''} ${person.lastName?.trim() || ''}`;
+}
   
 
+    
+  
 
 
   
