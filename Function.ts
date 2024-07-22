@@ -5,17 +5,11 @@ export const strValid = (str: string) => {
   }
 }
 // a. captalize(str) 
-export const capitalize = (str: string) => {
-  strValid(str)
-  return !str ? str : str.charAt(0).toUpperCase() + str.slice(1);
-}
+export const capitalize = (str: string) => str.replace(/\b\w/g, char => char.toUpperCase());
   
   // d. wordCount(str) 
-export const wordCount = (str: string) => {
-  strValid(str)
-  const words = str.trim().split(/\s+/);
-  return words.length;
-}
+export const wordCount = (str: string) => str.trim() === '' ? 0 : str.trim().split(/\s+/).length;
+
   
   //b. reverse(str)
 export const reverse = (str: string) => {
@@ -74,8 +68,8 @@ export const avgArr = (arr: number[]) => {
 
  // Task #3 Object Transformation
 export interface Person {
-  firstName: string,
-  lastName: string,
+  firstName?: string,
+  lastName?: string,
   age?: number 
 }
 
