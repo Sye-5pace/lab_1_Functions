@@ -1,14 +1,20 @@
 //Task #1 String Transformation
-export const strValid = (str: string) => {
+ const strValid = (str: string) => {
   if (typeof str !== 'string') {
     throw new TypeError('Not a string');
   }
 }
 // a. captalize(str) 
-export const capitalize = (str: string) => str.replace(/\b\w/g, char => char.toUpperCase());
+export const capitalize = (str: string) => {
+  strValid(str)
+  return str.replace(/\b\w/g, char => char.toUpperCase())
+};
   
   // d. wordCount(str) 
-export const wordCount = (str: string) => str.trim() === '' ? 0 : str.trim().split(/\s+/).length;
+export const wordCount = (str: string) => { 
+  strValid(str)
+  return str.trim() === '' ? 0 : str.trim().split(/\s+/).length
+};
 
   
   //b. reverse(str)
@@ -41,7 +47,8 @@ export const arrValid = (arr: number[]) => {
 // b. filterEven (arr)
 export const filterEven = (arr: number[]) => {
   arrValid(arr);
-  return arr.filter( num => num % 2 === 0);
+  return arr.filter(num => num % 2 !== 0);
+
 }
 
 // a. doubleArr (arr)
@@ -77,9 +84,12 @@ const isAtLeast = (value: number | undefined, target: number): boolean => {
   return value !== undefined && value >= target;
 }
 
-export const fullName = (person : Person) : string => {
-  return `${person.firstName?.trim() || ''} ${person.lastName?.trim() || ''}`;
-}
+export const fullName = (person: Person) => {
+  const firstName = person.firstName?.trim() || '';
+  const lastName = person.lastName?.trim() || '';
+  return (firstName + ' ' + lastName).trim();
+};
+
 
 export const isAdult = (person: Person): boolean => {
   return isAtLeast(person.age, 18);
