@@ -1,0 +1,45 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+jspm_packages/
+
+# Typescript compiled files
+*.tsbuildinfo
+
+# Output directory
+dist/
+build/
+
+# TypeScript definition files
+*.d.ts
+
+# Jest coverage directory
+coverage/
+
+# VS Code directory
+.vscode/
+
+# MacOS system files
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+
+# Environment variables
+.env
+
+# JetBrains IDEs
+.idea/
+
+# Miscellaneous
+*.log
+*.lock
+yarn.lock
+package-lock.json

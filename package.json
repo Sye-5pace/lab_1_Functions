@@ -1,0 +1,23 @@
+{
+  "name": "lab_1_functions",
+  "version": "1.0.0",
+  "description": "lab on functions",
+  "main": "Function.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sye-5pace/lab_1_Functions.git"
+  },
+  "author": "sye-5pace",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sye-5pace/lab_1_Functions/issues"
+  },
+  "homepage": "https://github.com/Sye-5pace/lab_1_Functions#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0"
+  }
+}
