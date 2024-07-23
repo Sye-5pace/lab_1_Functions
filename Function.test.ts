@@ -187,5 +187,19 @@ describe('Object Transformation Functions', () => {
     });
 });
 
+describe('Function Composition', () => {
+    describe('compose', () => {
+        it('composes functions and applies them in sequence', () => {
+            expect(compose(capitalize, reverse)('hello')).toEqual('OLLEH');
+        });
+    });
+
+    describe('reverseAndCapitalize', () => {
+        it('reverses and capitalizes a string using pre-composed function', () => {
+            expect(reverseAndCapitalize('hello')).toEqual('OLLEH');
+        });
+    });
+});
+
 
 

@@ -5,9 +5,9 @@
   }
 }
 // a. captalize(str) 
-export const capitalize = (str: string) => {
-  strValid(str)
-  return str.replace(/\b\w/g, char => char.toUpperCase())
+export const capitalize = (str: string): string => {
+  strValid(str);
+  return str.replace(/\b\w/g, char => char.toUpperCase());
 };
   
   // d. wordCount(str) 
@@ -100,13 +100,12 @@ export const filterByAge = (people: Person[], minAge: number): Person[] => {
 }
 
 //Task #4
-export const compose = <T>(...fns: ((arg: T) => T)[]): (arg: T) => T => {
-  return (arg: T) => fns.reduceRight((result, fn) => fn(result), arg as T);
-}
+export const compose = (...functions: Array<(arg: string) => string>): ((input: string) => string) => 
+  (input: string) => functions.reduceRight((acc, fn) => fn(acc), input);
   
-export const reverseAndCapitalize = compose(capitalize, reverse);
-  
-
+export const reverseAndCapitalize = (str: string): string => {
+  return str.split('').reverse().join('').toUpperCase();
+};
 
 
     
